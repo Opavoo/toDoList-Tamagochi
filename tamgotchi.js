@@ -32,6 +32,7 @@ let tamagotchi = {
   },
   setName: function(newName){
     this.pet.name = newName;
+    tamagotchi.getStatus();
   },
   eat: function(){
     if(this.pet.meal < 5){
@@ -40,6 +41,7 @@ let tamagotchi = {
     } else {
       this.pet.mood--;
     }
+    tamagotchi.getStatus();
   },
   sleep: function(){
     if(this.pet.energy < 5){
@@ -48,6 +50,7 @@ let tamagotchi = {
     } else{
       this.pet.meal--;
     }
+    tamagotchi.getStatus();
   },
   play: function(){
     if(this.pet.mood < 5){
@@ -56,18 +59,6 @@ let tamagotchi = {
     } else{
       this.pet.energy--;
     }
+    tamagotchi.getStatus();
   },
 }
-
-
-// tamagotchi.setName('Маша');
-// tamagotchi.eat();
-// tamagotchi.play();
-// tamagotchi.eat();
-// tamagotchi.play();
-// tamagotchi.play();
-// tamagotchi.play();
-// tamagotchi.eat();
-// tamagotchi.eat();
-// tamagotchi.play();
-tamagotchi.getStatus();
