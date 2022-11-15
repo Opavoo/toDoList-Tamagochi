@@ -23,8 +23,11 @@ const todoList = {
         }
     },
   
-    add: function(text) {
-       todoList.items.unshift(text);
+    add: function(texts, complete) {
+      if(complete === false){
+      todoList.items.unshift({text: texts, completed: complete});
+      }
+    todoList.printAll();
     },
   
     remove: function(index) {
@@ -36,5 +39,3 @@ const todoList = {
   
     complete: function(index) {},
   };
-  
-  
